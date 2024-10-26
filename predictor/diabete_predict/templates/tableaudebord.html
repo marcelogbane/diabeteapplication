@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - Diabetic Patients</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    <header>
+        <h1>tableau de bord patient</h1>
+    </header>
+
+    <section class="dashboard">
+        <h2>observation</h2>
+
+        <div class="grid-container">
+            <!-- 4 Sections for different health metrics -->
+            <div class="grid-item">
+                <h3>Tension Artérielle</h3>
+                <p>120/80 mmHg</p>
+            </div>
+            <div class="grid-item">
+                <h3>Glycémie</h3>
+                <p>180 mg/dL</p>
+            </div>
+            <div class="grid-item">
+                <h3>Cholestérol</h3>
+                <p>190 mg/dL</p>
+            </div>
+            <div class="grid-item">
+                <h3>Poids</h3>
+                <p>75 kg</p>
+            </div>
+        </div>
+
+        <!-- Section for upcoming appointments -->
+        <div class="appointments">
+            <h2>Rendez-vous Suivi</h2>
+            <ul>
+                <li>Marcelo Vieira - 2024-10-25 - 10h30</li>
+                <li>Vinicius Junior - 2024-11-01 - 14h00</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
