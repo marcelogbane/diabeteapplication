@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires de Connexion et d'Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <!-- cote Formulaire de Connexion -->
+        <section class="login-section">
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <label for="login-email">Email :</label>
+                <input type="email" id="login-email" name="login-email" required>
+
+                <label for="login-password">Mot de passe :</label>
+                <input type="password" id="login-password" name="login-password" required>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+
+        <!-- cote Formulaire d'Inscription -->
+        <section class="signup-section">
+            <h2>Inscription</h2>
+            <form id="signup-form">
+                <label for="signup-username">Nom d'utilisateur :</label>
+                <input type="text" id="signup-username" name="signup-username" required>
+
+                <label for="signup-email">Email :</label>
+                <input type="email" id="signup-email" name="signup-email" required>
+
+                <label for="signup-password">Mot de passe :</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+                
+                <label for="signup-contact">Numero de telephone :</label>
+                <input type="contact" id="signup-contact" name="signup-contact" required>
+                
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

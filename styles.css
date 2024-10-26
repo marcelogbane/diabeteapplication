@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(40, 126, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(40, 126, 255);
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 126, 255);
+}
+
+header {
+    background-color: rgb(40, 126, 255);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard {
+    width: 90%;
+    margin: 100px auto 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Grid layout for 4 health metrics */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+    margin-top: 0;
+}
+
+/* Section for appointments at the bottom */
+.appointments {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.appointments li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.appointments li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+/* Section principale */
+.health-data-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    padding: 20px;
+}
+
+/* Stylisation générale des éléments de santé */
+.health-item {
+    width: 200px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    position: absolute; /* Position absolue pour placer chaque élément dans un coin */
+}
+
+/* Positionner les éléments dans chaque coin */
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Ajustements de style pour un look harmonieux */
+.health-item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.health-item p {
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4853e8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixer le titre en haut de la page */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* S'assurer que le titre soit au-dessus du contenu */
+    box-shadow: 0 4px 8px #f0f0f0; /* Ajout d'une ombre pour un effet visuel */
+}
+
+.dashboard {
+    width: 90%;
+    margin: 80px auto 20px auto; /* Ajouter une marge supérieure pour que le contenu ne soit pas caché par l'en-tête fixe */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.patient-table {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.table-header, .table-body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+}
+
+.table-row {
+    display: contents;
+}
+
+.table-cell {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-header .table-cell {
+    font-weight: bold;
+    background-color: #e0f7fa;
+}
+
+button {
+    padding: 5px 15px;
+    background-color: #4853e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4853e8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.dashboard {
+    width: 90%;
+    margin: 80px auto 20px; /* Ajuste la marge supérieure pour laisser de l'espace pour le header */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+header {
+    background-color: #5c3ee5;
+    color: white;
+    padding: 20px;
+    text-align: center; /* Centrer le titre */
+    position: fixed; /* Fixer le titre en haut de la page */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* S'assurer que le titre soit au-dessus du contenu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un effet visuel */
+}
+
+
+
+
