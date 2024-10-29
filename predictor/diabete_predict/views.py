@@ -34,7 +34,7 @@ model = load('diabete_predict\\utils\\utils\\diabetes_model_training.joblib')
 def index(request):
     prediction = None
     prediction_percentage = None
-    error_message = None
+    error_message = None 
     if request.method == 'POST':
         try:
             age = float(request.POST['age'])
