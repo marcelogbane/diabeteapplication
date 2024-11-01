@@ -29,6 +29,7 @@ def login_user(request):
 
 
 # Charger le modèle
+# model = load('diabete_predict\\utils\\utils\\diabetes_model_training.joblib')
 model = load('diabete_predict/utils/diabetes_model_training.joblib')
 
 def index(request):
@@ -66,7 +67,7 @@ def index(request):
         except ValueError as e:
             error_message = "Erreur dans les données d'entrée : " + str(e)
 
-    return render(request, 'index.html', {
+    return render(request, 'tableaudebordmedecin.html', {
         'prediction': prediction,
         'prediction_percentage': prediction_percentage,
         'error_message': error_message
