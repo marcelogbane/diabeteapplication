@@ -3,3 +3,6 @@
 *vemv
 *venv
 *__pycache__
+*.joblib
+*db
+*.pyc

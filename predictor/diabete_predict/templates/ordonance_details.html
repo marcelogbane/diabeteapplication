@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordonnance</title>
+    <style>
+        /* Style de la page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0e4;
+        }
+
+        /* Style du conteneur de l'ordonnance */
+        .prescription-container {
+            width: 60%;
+            padding: 20px;
+            background-image: url("{% static 'img/par.webp' %}"); /* Remplacez par le chemin de votre image de parchemin */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 2px solid #a5834a;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            color: #5d4c3d;
+        }
+
+        /* Titre */
+        .prescription-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Informations principales */
+        .prescription-details {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Labels */
+        .prescription-label {
+            font-weight: bold;
+            color: #3e3021;
+        }
+
+        /* Bouton */
+        .prescription-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .print-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #a5834a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background-color: #8a6b3f;
+        }
+    </style>
+</head>
+<body>
+    <div class="prescription-container">
+        <!-- En-tête de l'ordonnance -->
+        <div class="prescription-header">
+            <h2>Ordonnance Médicale</h2>
+            <p>Date : {{ ordonance.date_emission }}</p>
+        </div>
+
+        <!-- Détails de l'ordonnance -->
+        <div class="prescription-details">
+            <p><span class="prescription-label">Nom du Patient :</span> {{ ordonance.patient.nom }}</p>
+            <p><span class="prescription-label">Âge :</span> {{ ordonance.patient.age }}</p>
+            
+            <p><span class="prescription-label">Médicaments :</span></p>
+            <ul>
+                {% for medication in ordonance.medicaments.all %}
+                    <li>{{ medication.designation }} - {{ medication.posologie }}</li>
+                {% endfor %}
+            </ul>
+            <p><span class="prescription-label">Instructions :</span> {{ ordonance.description }}</p>
+        </div>
+
+        <!-- Pied de page avec bouton d'impression -->
+        <div class="prescription-footer">
+            <button class="print-button" onclick="window.print()">Imprimer l'Ordonnance</button>
+        </div>
+    </div>
+</body>
+</html>

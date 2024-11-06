@@ -20,5 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('login/', include('diabete_predict.urls')),
+    path('', include('diabete_predict.urls')),
 ]

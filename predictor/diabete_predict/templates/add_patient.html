@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load form_extras %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Patient</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .back-link {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h1 class="text-center mb-4">Ajouter un Patient</h1>
+                    <form method="POST" action='{% url "add_patient" %}'>
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_nom">Nom du patient</label>
+                            {{ form.nom|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_prenom">Prénom du patient</label>
+                            {{ form.prenom|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_email">Email du patient</label>
+                            {{ form.email|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_numero">Numero du patient</label>
+                            {{ form.numero|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_age">Âge</label>
+                            {{ form.age|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_genre">genre</label>
+                            {{ form.genre|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_hypertention">Hypertention</label>
+                            {{ form.hypertention|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_maladie_cardiaque">Maladie cardiaque</label>
+                            {{ form.maladie_cardiaque|add_class:"form-control" }}
+                        </div> 
+                        <div class="form-group">
+                            <label for="id_masse">Masse</label>
+                            {{ form.masse|add_class:"form-control" }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_taille">Taille</label>
+                            {{ form.taille|add_class:"form-control" }}
+                        </div> 
+                        <div class="form-group">
+                            <label for="id_etat">Etat</label>
+                            {{ form.etat|add_class:"form-control" }}
+                        </div> 
+                        <!-- Add more fields as needed -->
+                        
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Ajouter le Patient</button>
+                    </form>
+                    <a href="{% url 'accueil' %}" class="btn btn-link back-link">Retour à la liste des patients</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

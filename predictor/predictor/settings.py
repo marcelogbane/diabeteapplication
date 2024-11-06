@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "diabete_predict"
+    "diabete_predict",
+    "phonenumber_field",
+    "django_celery_beat",
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# config de celery
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Redis en local
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "taskivoire@gmail.com"
+EMAIL_HOST_PASSWORD = "edhmiuztqpvoatlh"
+EMAIL_USE_TLS = True
